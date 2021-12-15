@@ -132,6 +132,9 @@ function editItem(e) {
 // load items
 function loadItems() {
   list = JSON.parse(localStorage.getItem("list"));
+  if (list.length < 1) {
+    list = [];
+  }
   updateUI();
   grocery.focus();
 }
